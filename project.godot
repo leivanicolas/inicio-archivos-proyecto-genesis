@@ -13,12 +13,14 @@ config_version=5
 config/name="genesis"
 run/main_scene="res://levels/level_1.tscn"
 config/features=PackedStringArray("4.1", "GL Compatibility")
-config/icon="res://icon.svg"
+config/icon="res://texturas/icon.svg"
 
 [display]
 
 window/size/viewport_width=256
 window/size/viewport_height=240
+window/size/window_width_override=1024
+window/size/window_height_override=960
 window/stretch/mode="canvas_items"
 
 [rendering]
