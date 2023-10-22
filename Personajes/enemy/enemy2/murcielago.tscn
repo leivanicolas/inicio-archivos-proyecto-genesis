@@ -1,6 +1,6 @@
 [gd_scene load_steps=54 format=3 uid="uid://ba5pbjxcur8we"]
 
-[ext_resource type="Texture2D" uid="uid://bajjsvj187tcq" path="res://Personajes/enemy/enemy1/rat and bat spritesheet calciumtrice.png" id="1_tjj88"]
+[ext_resource type="Texture2D" uid="uid://bajjsvj187tcq" path="res://texturas/rat and bat spritesheet calciumtrice.png" id="1_tjj88"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_np7qx"]
 atlas = ExtResource("1_tjj88")
