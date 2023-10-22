@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bajjsvj187tcq"
-path="res://.godot/imported/rat and bat spritesheet calciumtrice.png-19b1089cfdf00f4263044bbf8b3b52c1.ctex"
+path="res://.godot/imported/rat and bat spritesheet calciumtrice.png-fd900e283735178d3dbe9ae272155deb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Personajes/enemy/enemy1/rat and bat spritesheet calciumtrice.png"
-dest_files=["res://.godot/imported/rat and bat spritesheet calciumtrice.png-19b1089cfdf00f4263044bbf8b3b52c1.ctex"]
+source_file="res://texturas/rat and bat spritesheet calciumtrice.png"
+dest_files=["res://.godot/imported/rat and bat spritesheet calciumtrice.png-fd900e283735178d3dbe9ae272155deb.ctex"]
 
 [params]
 
