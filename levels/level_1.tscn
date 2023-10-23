@@ -1259,6 +1259,7 @@ sources/2 = SubResource("TileSetAtlasSource_chdta")
 sources/3 = SubResource("TileSetAtlasSource_uu0qn")
 
 [node name="level_1" type="Node2D"]
+position = Vector2(13, 407)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 
