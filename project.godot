@@ -24,6 +24,13 @@ window/stretch/mode="viewport"
 [dotnet]
 
 project/assembly_name="Nico Games"
+<<<<<<< HEAD
+=======
+
+[editor]
+
+script/search_in_file_extensions=PackedStringArray("gd", "gdshader", "")
+>>>>>>> Personajes-animaciones
 
 [input]
 
