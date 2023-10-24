@@ -1,7 +1,7 @@
 [gd_scene load_steps=38 format=3 uid="uid://bjpk6qevj31cr"]
 
 [ext_resource type="Texture2D" uid="uid://0t2mgjxlg4yr" path="res://Personajes/players/character1/attack/a1.png" id="1_3jnm6"]
-[ext_resource type="Script" path="res://scripts/character1.gd" id="1_l4um3"]
+[ext_resource type="Script" path="res://scripts/character1.gd" id="1_mxvmm"]
 [ext_resource type="Texture2D" uid="uid://dh5s56jtcg58s" path="res://Personajes/players/character1/attack/a2.png" id="2_55gf0"]
 [ext_resource type="Texture2D" uid="uid://budy64ihpncet" path="res://Personajes/players/character1/attack/a3.png" id="3_uynur"]
 [ext_resource type="Texture2D" uid="uid://xn01a8pxe724" path="res://Personajes/players/character1/attack/a4.png" id="4_57jot"]
@@ -166,7 +166,7 @@ radius = 54.0
 height = 408.0
 
 [node name="Genesis" type="CharacterBody2D"]
-script = ExtResource("1_l4um3")
+script = ExtResource("1_mxvmm")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_obdx8")
@@ -177,3 +177,8 @@ frame_progress = 0.372209
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(18, 63)
 shape = SubResource("CapsuleShape2D_kvbi6")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+limit_left = 0
+limit_right = 10000
+limit_bottom = 650
