@@ -1,25 +1,23 @@
-[gd_scene load_steps=23 format=3 uid="uid://cyovp60yyghod"]
+[gd_scene load_steps=21 format=3 uid="uid://cyovp60yyghod"]
 
-[ext_resource type="Texture2D" uid="uid://d3whakarf5kxj" path="res://texturas/TileKit.png" id="1_hhjim"]
-[ext_resource type="Texture2D" uid="uid://c4fbc5k4frpan" path="res://texturas/pixel_ocean_and_sky_background/1.png" id="1_kjh6t"]
-[ext_resource type="Texture2D" uid="uid://j8cyaucji8df" path="res://texturas/pixel_ocean_and_sky_background/2.png" id="2_8ir57"]
-[ext_resource type="Texture2D" uid="uid://nyjssbawj7uh" path="res://texturas/industrial_zone_tileset/1 Tiles/IndustrialTile_32.png" id="2_a1pk6"]
-[ext_resource type="PackedScene" uid="uid://blkbcx3yfxc33" path="res://Objects/bonus.tscn" id="2_qo1ji"]
-[ext_resource type="Texture2D" uid="uid://blk0qir58sy3b" path="res://texturas/industrial_zone_tileset/1 Tiles/IndustrialTile_55.png" id="3_3akhm"]
-[ext_resource type="Texture2D" uid="uid://do4dwq18x1xn1" path="res://texturas/pixel_ocean_and_sky_background/3.png" id="3_n8wah"]
-[ext_resource type="PackedScene" uid="uid://ko1kk3pdod3v" path="res://Objects/block.tscn" id="3_on143"]
-[ext_resource type="PackedScene" uid="uid://bmiw5xa4f6ph4" path="res://Personajes/players/character2/character2.tscn" id="4_5j7bl"]
-[ext_resource type="Texture2D" uid="uid://c227b5c3bbn8t" path="res://texturas/industrial_zone_tileset/1 Tiles/IndustrialTile_62.png" id="4_x02b0"]
-[ext_resource type="PackedScene" uid="uid://4kucf1ivws3g" path="res://Personajes/enemy/enemy1/raton.tscn" id="5_sikb3"]
-[ext_resource type="PackedScene" uid="uid://ba5pbjxcur8we" path="res://Personajes/enemy/enemy2/murcielago.tscn" id="6_k64s4"]
-[ext_resource type="PackedScene" uid="uid://bjpk6qevj31cr" path="res://Personajes/players/character1/character1.tscn" id="10_wvj1j"]
-[ext_resource type="PackedScene" uid="uid://hulrtpubtcp6" path="res://Objects/obstaculos/Hammer.tscn" id="11_8rymc"]
-[ext_resource type="PackedScene" uid="uid://ccpd4fpp45qcu" path="res://Objects/obstaculos/platform.tscn" id="12_nn1yy"]
-[ext_resource type="Texture2D" uid="uid://i5u0m4edl5n7" path="res://texturas/industrial_zone_tileset/3 Objects/Pointer1.png" id="13_aepvo"]
-[ext_resource type="PackedScene" uid="uid://bl8uva6vuh2dg" path="res://Objects/obstaculos/plataforma.tscn" id="17_mvuij"]
+[ext_resource type="Texture2D" uid="uid://c4fbc5k4frpan" path="res://texturas/pixel_ocean_and_sky_background/1.png" id="1_2fr6j"]
+[ext_resource type="Texture2D" uid="uid://j8cyaucji8df" path="res://texturas/pixel_ocean_and_sky_background/2.png" id="2_5sfco"]
+[ext_resource type="Texture2D" uid="uid://do4dwq18x1xn1" path="res://texturas/pixel_ocean_and_sky_background/3.png" id="3_0vyiu"]
+[ext_resource type="Texture2D" uid="uid://d3whakarf5kxj" path="res://texturas/TileKit.png" id="4_o8vjm"]
+[ext_resource type="Texture2D" uid="uid://nyjssbawj7uh" path="res://texturas/industrial_zone_tileset/1 Tiles/IndustrialTile_32.png" id="5_u0xbs"]
+[ext_resource type="Texture2D" uid="uid://blk0qir58sy3b" path="res://texturas/industrial_zone_tileset/1 Tiles/IndustrialTile_55.png" id="6_12261"]
+[ext_resource type="Texture2D" uid="uid://c227b5c3bbn8t" path="res://texturas/industrial_zone_tileset/1 Tiles/IndustrialTile_62.png" id="7_en70l"]
+[ext_resource type="PackedScene" uid="uid://bmiw5xa4f6ph4" path="res://Personajes/players/character2/character2.tscn" id="8_5d8kv"]
+[ext_resource type="PackedScene" uid="uid://4kucf1ivws3g" path="res://Personajes/enemy/enemy1/raton.tscn" id="9_tje6k"]
+[ext_resource type="PackedScene" uid="uid://ba5pbjxcur8we" path="res://Personajes/enemy/enemy2/murcielago.tscn" id="10_vq0cv"]
+[ext_resource type="PackedScene" uid="uid://bjpk6qevj31cr" path="res://Personajes/players/character1/character1.tscn" id="11_wobtd"]
+[ext_resource type="PackedScene" uid="uid://hulrtpubtcp6" path="res://Objects/obstaculos/Hammer.tscn" id="12_0hncs"]
+[ext_resource type="PackedScene" uid="uid://ccpd4fpp45qcu" path="res://Objects/obstaculos/platform.tscn" id="13_vofmg"]
+[ext_resource type="Texture2D" uid="uid://i5u0m4edl5n7" path="res://texturas/industrial_zone_tileset/3 Objects/Pointer1.png" id="16_1r8q8"]
+[ext_resource type="PackedScene" uid="uid://bvoj3eot0ieud" path="res://Objects/obstaculos/plataforma.tscn" id="17_btkqh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lys0m"]
-texture = ExtResource("1_hhjim")
+texture = ExtResource("4_o8vjm")
 3:0/0 = 0
 3:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 3:0/0/physics_layer_0/angular_velocity = 0.0
@@ -1201,7 +1199,7 @@ texture = ExtResource("1_hhjim")
 2:22/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_24emc"]
-texture = ExtResource("2_a1pk6")
+texture = ExtResource("5_u0xbs")
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
@@ -1220,7 +1218,7 @@ texture = ExtResource("2_a1pk6")
 1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_chdta"]
-texture = ExtResource("3_3akhm")
+texture = ExtResource("6_12261")
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
@@ -1239,7 +1237,7 @@ texture = ExtResource("3_3akhm")
 1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uu0qn"]
-texture = ExtResource("4_x02b0")
+texture = ExtResource("7_en70l")
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
@@ -1264,6 +1262,7 @@ sources/3 = SubResource("TileSetAtlasSource_uu0qn")
 
 [node name="level_1" type="Node2D"]
 position = Vector2(13, 407)
+metadata/_edit_lock_ = true
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 scroll_base_offset = Vector2(0, 100)
@@ -1275,7 +1274,7 @@ motion_scale = Vector2(0.1, 0.1)
 motion_mirroring = Vector2(576, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/1"]
-texture = ExtResource("1_kjh6t")
+texture = ExtResource("1_2fr6j")
 
 [node name="2" type="ParallaxLayer" parent="ParallaxBackground"]
 position = Vector2(578, 324)
@@ -1285,7 +1284,7 @@ motion_mirroring = Vector2(576, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/2"]
 z_index = 1
-texture = ExtResource("2_8ir57")
+texture = ExtResource("2_5sfco")
 
 [node name="3" type="ParallaxLayer" parent="ParallaxBackground"]
 position = Vector2(576, 321)
@@ -1295,7 +1294,7 @@ motion_mirroring = Vector2(576, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/3"]
 z_index = 1
-texture = ExtResource("3_n8wah")
+texture = ExtResource("3_0vyiu")
 
 [node name="TileMap" type="TileMap" parent="."]
 texture_filter = 1
@@ -1320,114 +1319,55 @@ layer_2/tile_data = PackedInt32Array(851967, 131072, 31, 786432, 262144, 30, 786
 
 [node name="Characters" type="Node2D" parent="."]
 
-[node name="clerigo" parent="Characters" instance=ExtResource("4_5j7bl")]
+[node name="clerigo" parent="Characters" instance=ExtResource("8_5d8kv")]
 position = Vector2(12, 191)
 
-[node name="raton" parent="Characters" instance=ExtResource("5_sikb3")]
-position = Vector2(162, 192)
+[node name="Genesis" parent="Characters" instance=ExtResource("11_wobtd")]
+position = Vector2(108, 182)
+scale = Vector2(0.08, 0.08)
 
-[node name="murcielago" parent="Characters" instance=ExtResource("6_k64s4")]
-position = Vector2(197, 109)
+[node name="murcielago" type="Node2D" parent="Characters"]
+position = Vector2(410.336, 170.573)
 
-[node name="Genesis" parent="Characters" instance=ExtResource("10_wvj1j")]
-position = Vector2(135, 185)
-scale = Vector2(0.0806577, 0.064375)
+[node name="CharacterBody2D" parent="Characters/murcielago" instance=ExtResource("10_vq0cv")]
+
+[node name="Node2D" type="Node2D" parent="Characters"]
+position = Vector2(644, 260)
+
+[node name="CharacterBody2D" parent="Characters/Node2D" instance=ExtResource("9_tje6k")]
+z_index = 2
+position = Vector2(0, -12)
 
 [node name="object" type="Node2D" parent="."]
 position = Vector2(651, 232)
 
-[node name="Area2D" parent="object" instance=ExtResource("11_8rymc")]
+[node name="Area2D" parent="object" instance=ExtResource("12_0hncs")]
 z_index = -1
 position = Vector2(1432, -105)
 
-[node name="Area2D2" parent="object" instance=ExtResource("11_8rymc")]
+[node name="Area2D2" parent="object" instance=ExtResource("12_0hncs")]
 z_index = -1
 position = Vector2(1400, -105)
 
-[node name="Area2D3" parent="object" instance=ExtResource("11_8rymc")]
+[node name="Area2D3" parent="object" instance=ExtResource("12_0hncs")]
 z_index = -1
 position = Vector2(1511, -105)
 
-[node name="platform" parent="object" instance=ExtResource("12_nn1yy")]
+[node name="platform" parent="object" instance=ExtResource("13_vofmg")]
 z_index = -1
 
-[node name="platform2" parent="object" instance=ExtResource("12_nn1yy")]
+[node name="platform2" parent="object" instance=ExtResource("13_vofmg")]
 z_index = -1
 position = Vector2(78, 0)
-
-[node name="Block5" type="Node2D" parent="object"]
-position = Vector2(-651, -232)
-
-[node name="Block" parent="object/Block5" instance=ExtResource("3_on143")]
-position = Vector2(235, 144)
-scale = Vector2(0.119995, 0.119995)
-
-[node name="Block2" parent="object/Block5" instance=ExtResource("3_on143")]
-position = Vector2(243, 144)
-scale = Vector2(0.119995, 0.119995)
-
-[node name="Block3" parent="object/Block5" instance=ExtResource("3_on143")]
-position = Vector2(251, 144)
-scale = Vector2(0.119995, 0.119995)
-
-[node name="Block4" parent="object/Block5" instance=ExtResource("3_on143")]
-position = Vector2(259, 144)
-scale = Vector2(0.119995, 0.119995)
-
-[node name="Block5" parent="object/Block5" instance=ExtResource("3_on143")]
-position = Vector2(267, 144)
-scale = Vector2(0.119995, 0.119995)
-
-[node name="Block6" parent="object/Block5" instance=ExtResource("3_on143")]
-position = Vector2(275, 144)
-scale = Vector2(0.119995, 0.119995)
-
-[node name="Block7" parent="object/Block5" instance=ExtResource("3_on143")]
-position = Vector2(283, 144)
-scale = Vector2(0.119995, 0.119995)
-
-[node name="Block8" parent="object/Block5" instance=ExtResource("3_on143")]
-position = Vector2(291, 144)
-scale = Vector2(0.119995, 0.119995)
-
-[node name="bonus" type="Node2D" parent="object"]
-position = Vector2(-658, -237)
-
-[node name="Bonus" parent="object/bonus" instance=ExtResource("2_qo1ji")]
-position = Vector2(250, 112)
-rotation = -0.0348806
-scale = Vector2(0.12, 0.12)
-
-[node name="Bonus2" parent="object/bonus" instance=ExtResource("2_qo1ji")]
-position = Vector2(258, 112)
-rotation = -0.0348806
-scale = Vector2(0.12, 0.12)
-
-[node name="Bonus3" parent="object/bonus" instance=ExtResource("2_qo1ji")]
-position = Vector2(266, 112)
-rotation = -0.0348806
-scale = Vector2(0.12, 0.12)
-
-[node name="Bonus4" parent="object/bonus" instance=ExtResource("2_qo1ji")]
-position = Vector2(274, 112)
-rotation = -0.0348806
-scale = Vector2(0.12, 0.12)
-
-[node name="Bonus5" parent="object/bonus" instance=ExtResource("2_qo1ji")]
-position = Vector2(282, 112)
-rotation = -0.0348806
-scale = Vector2(0.12, 0.12)
-
-[node name="Bonus6" parent="object/bonus" instance=ExtResource("2_qo1ji")]
-position = Vector2(290, 112)
-rotation = -0.0348806
-scale = Vector2(0.12, 0.12)
 
 [node name="Pointer1" type="Sprite2D" parent="object"]
 z_index = 1
 position = Vector2(-277, -30)
 scale = Vector2(0.640005, 0.44)
-texture = ExtResource("13_aepvo")
+texture = ExtResource("16_1r8q8")
 
-[node name="plataforma" parent="." instance=ExtResource("17_mvuij")]
-scale = Vector2(0.44, 0.44)
+[node name="plataforma" parent="object" instance=ExtResource("17_btkqh")]
+position = Vector2(223, -132)
+
+[node name="plataforma2" parent="object" instance=ExtResource("17_btkqh")]
+position = Vector2(1226, -191)
