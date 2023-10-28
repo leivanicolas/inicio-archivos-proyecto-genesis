@@ -1,22 +1,21 @@
-[gd_scene load_steps=23 format=3 uid="uid://cyovp60yyghod"]
+[gd_scene load_steps=22 format=3 uid="uid://cyovp60yyghod"]
 
 [ext_resource type="Texture2D" uid="uid://d3whakarf5kxj" path="res://texturas/TileKit.png" id="1_hhjim"]
 [ext_resource type="Texture2D" uid="uid://c4fbc5k4frpan" path="res://texturas/pixel_ocean_and_sky_background/1.png" id="1_kjh6t"]
 [ext_resource type="Texture2D" uid="uid://j8cyaucji8df" path="res://texturas/pixel_ocean_and_sky_background/2.png" id="2_8ir57"]
 [ext_resource type="Texture2D" uid="uid://nyjssbawj7uh" path="res://texturas/industrial_zone_tileset/1 Tiles/IndustrialTile_32.png" id="2_a1pk6"]
-[ext_resource type="PackedScene" uid="uid://blkbcx3yfxc33" path="res://Objects/bonus.tscn" id="2_qo1ji"]
 [ext_resource type="Texture2D" uid="uid://blk0qir58sy3b" path="res://texturas/industrial_zone_tileset/1 Tiles/IndustrialTile_55.png" id="3_3akhm"]
 [ext_resource type="Texture2D" uid="uid://do4dwq18x1xn1" path="res://texturas/pixel_ocean_and_sky_background/3.png" id="3_n8wah"]
-[ext_resource type="PackedScene" uid="uid://ko1kk3pdod3v" path="res://Objects/block.tscn" id="3_on143"]
 [ext_resource type="PackedScene" uid="uid://bmiw5xa4f6ph4" path="res://Personajes/players/character2/character2.tscn" id="4_5j7bl"]
 [ext_resource type="Texture2D" uid="uid://c227b5c3bbn8t" path="res://texturas/industrial_zone_tileset/1 Tiles/IndustrialTile_62.png" id="4_x02b0"]
 [ext_resource type="PackedScene" uid="uid://4kucf1ivws3g" path="res://Personajes/enemy/enemy1/raton.tscn" id="5_sikb3"]
 [ext_resource type="PackedScene" uid="uid://ba5pbjxcur8we" path="res://Personajes/enemy/enemy2/murcielago.tscn" id="6_k64s4"]
-[ext_resource type="PackedScene" uid="uid://bjpk6qevj31cr" path="res://Personajes/players/character1/character1.tscn" id="10_wvj1j"]
-[ext_resource type="PackedScene" uid="uid://hulrtpubtcp6" path="res://Objects/obstaculos/Hammer.tscn" id="11_8rymc"]
-[ext_resource type="PackedScene" uid="uid://ccpd4fpp45qcu" path="res://Objects/obstaculos/platform.tscn" id="12_nn1yy"]
-[ext_resource type="Texture2D" uid="uid://i5u0m4edl5n7" path="res://texturas/industrial_zone_tileset/3 Objects/Pointer1.png" id="13_aepvo"]
-[ext_resource type="PackedScene" uid="uid://bl8uva6vuh2dg" path="res://Objects/obstaculos/plataforma.tscn" id="17_mvuij"]
+[ext_resource type="PackedScene" uid="uid://hulrtpubtcp6" path="res://Objects/obstaculos/Hammer.tscn" id="11_ew0jw"]
+[ext_resource type="PackedScene" uid="uid://ccpd4fpp45qcu" path="res://Objects/obstaculos/platform.tscn" id="12_d7pnm"]
+[ext_resource type="PackedScene" uid="uid://ko1kk3pdod3v" path="res://Objects/block.tscn" id="13_4lx1u"]
+[ext_resource type="PackedScene" uid="uid://blkbcx3yfxc33" path="res://Objects/bonus.tscn" id="14_7hgl3"]
+[ext_resource type="Texture2D" uid="uid://i5u0m4edl5n7" path="res://texturas/industrial_zone_tileset/3 Objects/Pointer1.png" id="15_htvqt"]
+[ext_resource type="PackedScene" uid="uid://bl8uva6vuh2dg" path="res://Objects/obstaculos/plataforma.tscn" id="16_f1ihw"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lys0m"]
 texture = ExtResource("1_hhjim")
@@ -1329,96 +1328,96 @@ position = Vector2(162, 192)
 [node name="murcielago" parent="Characters" instance=ExtResource("6_k64s4")]
 position = Vector2(197, 109)
 
-[node name="Genesis" parent="Characters" instance=ExtResource("10_wvj1j")]
+[node name="Genesis" parent="Characters" instance=ExtResource("4_5j7bl")]
 position = Vector2(135, 185)
 scale = Vector2(0.0806577, 0.064375)
 
 [node name="object" type="Node2D" parent="."]
 position = Vector2(651, 232)
 
-[node name="Area2D" parent="object" instance=ExtResource("11_8rymc")]
+[node name="Area2D" parent="object" instance=ExtResource("11_ew0jw")]
 z_index = -1
 position = Vector2(1432, -105)
 
-[node name="Area2D2" parent="object" instance=ExtResource("11_8rymc")]
+[node name="Area2D2" parent="object" instance=ExtResource("11_ew0jw")]
 z_index = -1
 position = Vector2(1400, -105)
 
-[node name="Area2D3" parent="object" instance=ExtResource("11_8rymc")]
+[node name="Area2D3" parent="object" instance=ExtResource("11_ew0jw")]
 z_index = -1
 position = Vector2(1511, -105)
 
-[node name="platform" parent="object" instance=ExtResource("12_nn1yy")]
+[node name="platform" parent="object" instance=ExtResource("12_d7pnm")]
 z_index = -1
 
-[node name="platform2" parent="object" instance=ExtResource("12_nn1yy")]
+[node name="platform2" parent="object" instance=ExtResource("12_d7pnm")]
 z_index = -1
 position = Vector2(78, 0)
 
 [node name="Block5" type="Node2D" parent="object"]
 position = Vector2(-651, -232)
 
-[node name="Block" parent="object/Block5" instance=ExtResource("3_on143")]
+[node name="Block" parent="object/Block5" instance=ExtResource("13_4lx1u")]
 position = Vector2(235, 144)
 scale = Vector2(0.119995, 0.119995)
 
-[node name="Block2" parent="object/Block5" instance=ExtResource("3_on143")]
+[node name="Block2" parent="object/Block5" instance=ExtResource("13_4lx1u")]
 position = Vector2(243, 144)
 scale = Vector2(0.119995, 0.119995)
 
-[node name="Block3" parent="object/Block5" instance=ExtResource("3_on143")]
+[node name="Block3" parent="object/Block5" instance=ExtResource("13_4lx1u")]
 position = Vector2(251, 144)
 scale = Vector2(0.119995, 0.119995)
 
-[node name="Block4" parent="object/Block5" instance=ExtResource("3_on143")]
+[node name="Block4" parent="object/Block5" instance=ExtResource("13_4lx1u")]
 position = Vector2(259, 144)
 scale = Vector2(0.119995, 0.119995)
 
-[node name="Block5" parent="object/Block5" instance=ExtResource("3_on143")]
+[node name="Block5" parent="object/Block5" instance=ExtResource("13_4lx1u")]
 position = Vector2(267, 144)
 scale = Vector2(0.119995, 0.119995)
 
-[node name="Block6" parent="object/Block5" instance=ExtResource("3_on143")]
+[node name="Block6" parent="object/Block5" instance=ExtResource("13_4lx1u")]
 position = Vector2(275, 144)
 scale = Vector2(0.119995, 0.119995)
 
-[node name="Block7" parent="object/Block5" instance=ExtResource("3_on143")]
+[node name="Block7" parent="object/Block5" instance=ExtResource("13_4lx1u")]
 position = Vector2(283, 144)
 scale = Vector2(0.119995, 0.119995)
 
-[node name="Block8" parent="object/Block5" instance=ExtResource("3_on143")]
+[node name="Block8" parent="object/Block5" instance=ExtResource("13_4lx1u")]
 position = Vector2(291, 144)
 scale = Vector2(0.119995, 0.119995)
 
 [node name="bonus" type="Node2D" parent="object"]
 position = Vector2(-658, -237)
 
-[node name="Bonus" parent="object/bonus" instance=ExtResource("2_qo1ji")]
+[node name="Bonus" parent="object/bonus" instance=ExtResource("14_7hgl3")]
 position = Vector2(250, 112)
 rotation = -0.0348806
 scale = Vector2(0.12, 0.12)
 
-[node name="Bonus2" parent="object/bonus" instance=ExtResource("2_qo1ji")]
+[node name="Bonus2" parent="object/bonus" instance=ExtResource("14_7hgl3")]
 position = Vector2(258, 112)
 rotation = -0.0348806
 scale = Vector2(0.12, 0.12)
 
-[node name="Bonus3" parent="object/bonus" instance=ExtResource("2_qo1ji")]
+[node name="Bonus3" parent="object/bonus" instance=ExtResource("14_7hgl3")]
 position = Vector2(266, 112)
 rotation = -0.0348806
 scale = Vector2(0.12, 0.12)
 
-[node name="Bonus4" parent="object/bonus" instance=ExtResource("2_qo1ji")]
+[node name="Bonus4" parent="object/bonus" instance=ExtResource("14_7hgl3")]
 position = Vector2(274, 112)
 rotation = -0.0348806
 scale = Vector2(0.12, 0.12)
 
-[node name="Bonus5" parent="object/bonus" instance=ExtResource("2_qo1ji")]
+[node name="Bonus5" parent="object/bonus" instance=ExtResource("14_7hgl3")]
 position = Vector2(282, 112)
 rotation = -0.0348806
 scale = Vector2(0.12, 0.12)
 
-[node name="Bonus6" parent="object/bonus" instance=ExtResource("2_qo1ji")]
+[node name="Bonus6" parent="object/bonus" instance=ExtResource("14_7hgl3")]
 position = Vector2(290, 112)
 rotation = -0.0348806
 scale = Vector2(0.12, 0.12)
@@ -1427,7 +1426,7 @@ scale = Vector2(0.12, 0.12)
 z_index = 1
 position = Vector2(-277, -30)
 scale = Vector2(0.640005, 0.44)
-texture = ExtResource("13_aepvo")
+texture = ExtResource("15_htvqt")
 
-[node name="plataforma" parent="." instance=ExtResource("17_mvuij")]
+[node name="plataforma" parent="." instance=ExtResource("16_f1ihw")]
 scale = Vector2(0.44, 0.44)
