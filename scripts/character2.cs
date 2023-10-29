@@ -42,13 +42,13 @@ public partial class character2 : CharacterBody2D
 	public void TakeDamage(int amount)
 	{
 		health -= amount;
-		if(health = 0)
+		if(health == 0)
 		{
-			Die()
+			Die();
 		}
 	}
 	private void Die()
 	{
-		GD.print("Muerto")
+		
 	}
 }
