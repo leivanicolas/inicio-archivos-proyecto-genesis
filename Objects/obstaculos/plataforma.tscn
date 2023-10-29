@@ -1,68 +1,109 @@
-[gd_scene load_steps=6 format=3 uid="uid://bl8uva6vuh2dg"]
+[gd_scene load_steps=6 format=3 uid="uid://bvoj3eot0ieud"]
 
-[ext_resource type="Texture2D" uid="uid://cwce32kahfgf4" path="res://texturas/industrial_zone_tileset/1 Tiles/IndustrialTile_53.png" id="1_ee0vh"]
+[ext_resource type="Texture2D" uid="uid://bl0ng6ygie6gw" path="res://texturas/industrial_zone_tileset/1 Tiles/IndustrialTile_80.png" id="1_x4eys"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_5xsd1"]
-size = Vector2(96, 32)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gcl16"]
+size = Vector2(32, 16)
 
-[sub_resource type="Animation" id="Animation_08xld"]
+[sub_resource type="Animation" id="Animation_dqokj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_x4eys")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../CollisionShape2D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_ocejh"]
+resource_name = "subir_bajar"
 length = 4.0
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
+tracks/0/path = NodePath(".:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0, 2, 4),
 "transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(0, 0), Vector2(0, 200), Vector2(0, 0)]
+"update": 1,
+"values": [ExtResource("1_x4eys"), ExtResource("1_x4eys"), ExtResource("1_x4eys")]
 }
-
-[sub_resource type="Animation" id="Animation_umvir"]
-resource_name = "movimiento"
-length = 4.0
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
 "times": PackedFloat32Array(0, 2, 4),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector2(0, 0), Vector2(0, 213), Vector2(0, 0)]
+"values": [Vector2(0, 0), Vector2(0, 95), Vector2(0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../CollisionShape2D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 2, 4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 95), Vector2(0, 0)]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_hh1jj"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kt57j"]
 _data = {
-"RESET": SubResource("Animation_08xld"),
-"movimiento": SubResource("Animation_umvir")
+"RESET": SubResource("Animation_dqokj"),
+"subir_bajar": SubResource("Animation_ocejh")
 }
 
-[node name="plataforma" type="CharacterBody2D"]
+[node name="plataforma" type="Node2D"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(32, 0)
-shape = SubResource("RectangleShape2D_5xsd1")
+[node name="Area2D" type="CharacterBody2D" parent="."]
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_ee0vh")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_gcl16")
 
-[node name="Sprite2D2" type="Sprite2D" parent="."]
-position = Vector2(32, 0)
-texture = ExtResource("1_ee0vh")
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+texture = ExtResource("1_x4eys")
+vframes = 2
 
-[node name="Sprite2D3" type="Sprite2D" parent="."]
-position = Vector2(64, 0)
-texture = ExtResource("1_ee0vh")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-autoplay = "RESET"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Area2D/Sprite2D"]
+autoplay = "subir_bajar"
 libraries = {
-"": SubResource("AnimationLibrary_hh1jj")
+"": SubResource("AnimationLibrary_kt57j")
 }

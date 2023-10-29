@@ -11,8 +11,17 @@ config_version=5
 [application]
 
 config/name="Inicio-archivos-proyecto-genesis"
-run/main_scene="res://levels/level_1.tscn"
+run/main_scene="res://Level/level_1.tscn"
 config/features=PackedStringArray("4.1", "C#", "GL Compatibility")
+config/icon="res://icon.svg"
+<<<<<<<HEADconfig/features=PackedStringArray("4.1", "C#", "GL Compatibility")
+<<<<<<<HEADconfig/name="Inicio-archivos-proyecto-genesis"
+
+[display]
+
+window/size/viewport_width=1080
+window/size/viewport_height=720
+window/stretch/mode="viewport"
 
 [dotnet]
 
@@ -40,5 +49,6 @@ jump={
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
