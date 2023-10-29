@@ -1,5 +1,6 @@
-[gd_scene load_steps=54 format=3 uid="uid://bmiw5xa4f6ph4"]
+[gd_scene load_steps=55 format=3 uid="uid://bmiw5xa4f6ph4"]
 
+[ext_resource type="Script" path="res://Personajes/players/character2/character2.cs" id="1_akm37"]
 [ext_resource type="Texture2D" uid="uid://dlf8w2wtcy3xb" path="res://Personajes/players/character2/cleric spritesheet calciumtrice.png" id="1_dufdb"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rcwng"]
@@ -385,6 +386,7 @@ radius = 7.0
 height = 24.0
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_akm37")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_wcerb")
@@ -393,3 +395,9 @@ autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_n4uys")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(1.5, 1.5)
+limit_left = 0
+limit_right = 10000
+limit_bottom = 650
