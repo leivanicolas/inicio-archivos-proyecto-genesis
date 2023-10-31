@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://bfw53iu6eowuv"]
+
+[ext_resource type="AudioStream" uid="uid://cg07kh5gefaxo" path="res://sonidos/24.wav" id="1_mq420"]
+
+[node name="Node2D" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_mq420")
+autoplay = true

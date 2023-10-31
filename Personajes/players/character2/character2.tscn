@@ -399,7 +399,7 @@ autoplay = "idle"
 shape = SubResource("CapsuleShape2D_n4uys")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(1.25, 1.25)
+zoom = Vector2(2, 2)
 limit_left = 0
 limit_right = 10000
 limit_bottom = 640
