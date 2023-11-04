@@ -1303,6 +1303,7 @@ texture = ExtResource("9_aaqx4")
 
 [sub_resource type="TileSet" id="TileSet_8d1up"]
 physics_layer_0/collision_layer = 1
+physics_layer_0/collision_mask = 0
 sources/0 = SubResource("TileSetAtlasSource_lys0m")
 sources/1 = SubResource("TileSetAtlasSource_24emc")
 sources/2 = SubResource("TileSetAtlasSource_chdta")
@@ -1474,8 +1475,8 @@ metadata/_edit_lock_ = true
 
 [node name="Characters" type="Node2D" parent="."]
 
-[node name="Clerigo" parent="Characters" instance=ExtResource("8_sv2du")]
-position = Vector2(1919, 6)
+[node name="Player" parent="Characters" instance=ExtResource("8_sv2du")]
+position = Vector2(80, 183)
 
 [node name="murcielago" type="Node2D" parent="Characters"]
 position = Vector2(410.336, 170.573)

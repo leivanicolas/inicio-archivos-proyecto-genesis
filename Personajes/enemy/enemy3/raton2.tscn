@@ -1,6 +1,7 @@
-[gd_scene load_steps=57 format=3 uid="uid://dvkpxd32xkfo8"]
+[gd_scene load_steps=61 format=3 uid="uid://dvkpxd32xkfo8"]
 
 [ext_resource type="Texture2D" uid="uid://bajjsvj187tcq" path="res://texturas/rat and bat spritesheet calciumtrice.png" id="1_i0t1s"]
+[ext_resource type="Script" path="res://scripts/Raton2.cs" id="1_ppopg"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_arwme"]
 atlas = ExtResource("1_i0t1s")
@@ -380,6 +381,33 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="Animation" id="Animation_n61nl"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
 [sub_resource type="Animation" id="Animation_2xetf"]
 resource_name = "walk"
 length = 8.0
@@ -410,43 +438,29 @@ tracks/1/keys = {
 "values": [Vector2(1, 1), Vector2(-1, 1), Vector2(1, 1)]
 }
 
-[sub_resource type="Animation" id="Animation_n61nl"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, 0)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:scale")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1, 1)]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_b13d8"]
 _data = {
 "RESET": SubResource("Animation_n61nl"),
 "walk": SubResource("Animation_2xetf")
 }
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_x5b50"]
-radius = 5.0
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jumbg"]
+radius = 2.0
+height = 8.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1xm0u"]
+size = Vector2(2, 7)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bh28s"]
+size = Vector2(2, 7)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8bp21"]
+size = Vector2(8, 3)
 
 [node name="Node2D" type="CharacterBody2D"]
+collision_layer = 4
+collision_mask = 2
+script = ExtResource("1_ppopg")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 
@@ -463,5 +477,23 @@ libraries = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.200001, 12)
-shape = SubResource("CircleShape2D_x5b50")
+position = Vector2(0, 13)
+rotation = -1.5708
+shape = SubResource("CapsuleShape2D_jumbg")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-6, 12)
+shape = SubResource("RectangleShape2D_1xm0u")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(6, 12)
+shape = SubResource("RectangleShape2D_bh28s")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 8.5)
+shape = SubResource("RectangleShape2D_8bp21")
+
+[connection signal="area_entered" from="Area2D" to="." method="OnArea2dAreaEntered"]
+[connection signal="body_entered" from="Area2D" to="." method="OnArea2dBodyEntered"]
