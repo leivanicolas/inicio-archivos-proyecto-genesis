@@ -3,62 +3,93 @@ using System;
 
 public partial class Character2 : CharacterBody2D
 {
+	// Fisica de movimiento
 	[Export] public float speed = 300.0f;
-	[Export] public float jumpVelocity = -400.0f;
-	public bool isJumping;
-
-	public int health = 1;
-
-	// Get the gravity from the project settings to be synced with RigidBody nodes.
+	[Export] public float jumpVelocity = -400.0f;	
+	// Obtener gravedad desde la configuracion de godot
 	public float gravity = ProjectSettings.GetSetting("physics/2d/default_gravity").AsSingle();
 
-	public override void _PhysicsProcess(double delta)
+	// Animacion 
+	private AnimatedSprite2D _animationController;
+
+	// Ataque
+	private bool _isAttacking = false;
+
+
+    public override void _Ready()
+    {
+		// Obtener referencia al nodo
+        _animationController = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
+    }
+
+    public override void _PhysicsProcess(double delta)
 	{
 		Vector2 velocity = Velocity;
 
-		// Add the gravity.
+		//Actualizamos animaciones segun velocidad x idle o walk
+		UpdateSpriteRenderer(velocity.X);
+
+		// Aplicamos gravedad al personaje 
 		if (!IsOnFloor())
 		{
 			velocity.Y += gravity * (float)delta;
-
 		}
-			
 
-		// Handle Jump.
-		if (Input.IsActionJustPressed("jump") && IsOnFloor())
+		// Aplicamos fuerza para saltar
+		if(Input.IsActionPressed("jump") && IsOnFloor())
 		{
 			velocity.Y = jumpVelocity;
-			isJumping = true;
-			GD.Print(isJumping);
-		}			
+		}
 
-		// Get the input direction and handle the movement/deceleration.
-		// As good practice, you should replace UI actions with custom gameplay actions.
-		Vector2 direction = Input.GetVector("left", "right", "ui_up", "ui_down");
-		if (direction != Vector2.Zero)
+		// Aplicamos movimiento izq y der personaje
+		velocity.X = 0;
+		if(Input.IsActionPressed("left"))
 		{
-			velocity.X = direction.X * speed;
+			velocity.X = -speed;
 		}
-		else
+		else if(Input.IsActionPressed("right"))
 		{
-			velocity.X = Mathf.MoveToward(Velocity.X, 0, speed);
+			velocity.X = speed;
 		}
+
+		// Ataque
+		HandleAttack();
 
 		Velocity = velocity;
 		MoveAndSlide();
+	} 
 
-	}
-
-	public void TakeDamage(int amount)
+	private void UpdateSpriteRenderer(float velocityX)
 	{
-		health -= amount;
-		if(health == 0)
+		bool walking = velocityX != 0;
+
+		if(_isAttacking == false)
 		{
-			Die();
+			if(walking)
+			{
+				_animationController.Play("walk");
+				_animationController.FlipH = velocityX < 0;
+			}
+			else
+			{
+				_animationController.Play("idle");
+			}
 		}
 	}
-	private void Die()
+
+	private void HandleAttack()
 	{
+
+		if(Input.IsActionPressed("attack"))
+		{
+			
+			_animationController.Play("attack");
+			_isAttacking = true;
+		}
+		else
+		{
+			_isAttacking = false;
+		}		
 		
 	}
 }

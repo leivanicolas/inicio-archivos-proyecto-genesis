@@ -1,4 +1,4 @@
-[gd_scene load_steps=57 format=3 uid="uid://bmiw5xa4f6ph4"]
+[gd_scene load_steps=56 format=3 uid="uid://bmiw5xa4f6ph4"]
 
 [ext_resource type="Texture2D" uid="uid://dlf8w2wtcy3xb" path="res://Personajes/players/character2/cleric spritesheet calciumtrice.png" id="1_dufdb"]
 [ext_resource type="Script" path="res://scripts/Character2.cs" id="1_itlqq"]
@@ -238,7 +238,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"attack",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -308,7 +308,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"idle",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -343,7 +343,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"idle2",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -378,30 +378,29 @@ animations = [{
 }],
 "loop": true,
 "name": &"walk",
-"speed": 5.0
+"speed": 10.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_n4uys"]
 radius = 4.0
 height = 32.0
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_am518"]
-size = Vector2(4, 28)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_l5m7s"]
-size = Vector2(4, 28)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_i5w7d"]
+radius = 8.0
+height = 32.0
 
 [node name="Player" type="CharacterBody2D"]
 collision_layer = 2
-collision_mask = 5
 script = ExtResource("1_itlqq")
 speed = 150.0
 jumpVelocity = -350.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_wcerb")
-animation = &"idle"
+animation = &"attack"
 autoplay = "idle"
+frame = 5
+frame_progress = 0.636499
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_n4uys")
@@ -413,11 +412,9 @@ limit_right = 10000
 limit_bottom = 640
 
 [node name="Area2D" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(5, 0)
-shape = SubResource("RectangleShape2D_am518")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-5, 0)
-shape = SubResource("RectangleShape2D_l5m7s")
+position = Vector2(-1, 0)
+shape = SubResource("CapsuleShape2D_i5w7d")
