@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://dj4bpofyt7e1i"]
+[gd_scene load_steps=36 format=3 uid="uid://dj4bpofyt7e1i"]
 
 [ext_resource type="Texture2D" uid="uid://c4fbc5k4frpan" path="res://texturas/pixel_ocean_and_sky_background/1.png" id="1_pkod5"]
 [ext_resource type="Texture2D" uid="uid://j8cyaucji8df" path="res://texturas/pixel_ocean_and_sky_background/2.png" id="2_crxpc"]
@@ -27,6 +27,7 @@
 [ext_resource type="AudioStream" uid="uid://cg07kh5gefaxo" path="res://sonidos/24.wav" id="25_vxp0q"]
 [ext_resource type="PackedScene" uid="uid://deaa3sd2ttw0u" path="res://Personajes/boss/boss1.tscn" id="26_brs3j"]
 [ext_resource type="PackedScene" uid="uid://y5n3m1vyrjff" path="res://Personajes/boss/boss2.tscn" id="27_26dvy"]
+[ext_resource type="Texture2D" uid="uid://cmpsoqbb8eg0u" path="res://texturas/spritesheet.png" id="28_l64e4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lys0m"]
 texture = ExtResource("4_ubf10")
@@ -1318,7 +1319,7 @@ metadata/_edit_lock_ = true
 scroll_base_offset = Vector2(0, 100)
 
 [node name="1" type="ParallaxLayer" parent="ParallaxBackground"]
-position = Vector2(577, 324)
+position = Vector2(576, 324)
 scale = Vector2(2, 2)
 motion_scale = Vector2(0.1, 0.1)
 motion_mirroring = Vector2(576, 0)
@@ -1327,7 +1328,7 @@ motion_mirroring = Vector2(576, 0)
 texture = ExtResource("1_pkod5")
 
 [node name="2" type="ParallaxLayer" parent="ParallaxBackground"]
-position = Vector2(578, 324)
+position = Vector2(520, 324)
 scale = Vector2(2, 2)
 motion_scale = Vector2(0.2, 0.2)
 motion_mirroring = Vector2(576, 0)
@@ -1498,3 +1499,9 @@ autoplay = true
 
 [node name="CharacterBody2D2" parent="." instance=ExtResource("27_26dvy")]
 position = Vector2(1529, 24)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(675, 218)
+texture = ExtResource("28_l64e4")
+region_enabled = true
+region_rect = Rect2(682, 110, 122, 20)
