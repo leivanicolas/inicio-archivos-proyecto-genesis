@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 [gd_scene load_steps=36 format=3 uid="uid://dj4bpofyt7e1i"]
+=======
+[gd_scene load_steps=34 format=3 uid="uid://dj4bpofyt7e1i"]
+>>>>>>> 19d41d59a4afeb97440244088d834c8f55697d80
 
 [ext_resource type="Texture2D" uid="uid://c4fbc5k4frpan" path="res://texturas/pixel_ocean_and_sky_background/1.png" id="1_pkod5"]
 [ext_resource type="Texture2D" uid="uid://j8cyaucji8df" path="res://texturas/pixel_ocean_and_sky_background/2.png" id="2_crxpc"]
@@ -25,7 +29,6 @@
 [ext_resource type="PackedScene" uid="uid://jy5pwflfmfd0" path="res://Personajes/Zelda.tscn" id="23_bb8d6"]
 [ext_resource type="PackedScene" uid="uid://c3hcb3vtcy8cd" path="res://Personajes/enemy/enemy4/eyeball.tscn" id="24_6ne8f"]
 [ext_resource type="AudioStream" uid="uid://cg07kh5gefaxo" path="res://sonidos/24.wav" id="25_vxp0q"]
-[ext_resource type="PackedScene" uid="uid://deaa3sd2ttw0u" path="res://Personajes/boss/boss1.tscn" id="26_brs3j"]
 [ext_resource type="PackedScene" uid="uid://y5n3m1vyrjff" path="res://Personajes/boss/boss2.tscn" id="27_26dvy"]
 [ext_resource type="Texture2D" uid="uid://cmpsoqbb8eg0u" path="res://texturas/spritesheet.png" id="28_l64e4"]
 
@@ -1477,7 +1480,7 @@ metadata/_edit_lock_ = true
 [node name="Characters" type="Node2D" parent="."]
 
 [node name="Player" parent="Characters" instance=ExtResource("8_sv2du")]
-position = Vector2(80, 183)
+position = Vector2(207, 159)
 
 [node name="murcielago" type="Node2D" parent="Characters"]
 position = Vector2(410.336, 170.573)
@@ -1494,8 +1497,6 @@ metadata/_edit_lock_ = true
 stream = ExtResource("25_vxp0q")
 volume_db = -25.0
 autoplay = true
-
-[node name="CharacterBody2D" parent="." instance=ExtResource("26_brs3j")]
 
 [node name="CharacterBody2D2" parent="." instance=ExtResource("27_26dvy")]
 position = Vector2(1529, 24)
