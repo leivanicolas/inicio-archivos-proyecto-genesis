@@ -1481,6 +1481,7 @@ metadata/_edit_lock_ = true
 
 [node name="Player" parent="Characters" instance=ExtResource("8_sv2du")]
 position = Vector2(207, 159)
+speed = 200.0
 
 [node name="murcielago" type="Node2D" parent="Characters"]
 position = Vector2(410.336, 170.573)
