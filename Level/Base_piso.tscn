@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://cb25sbgy8amru"]
+
+[ext_resource type="Texture2D" uid="uid://dl0731lfkf8bw" path="res://texturas/industrial_zone_tileset/1 Tiles/IndustrialTile_71.png" id="1_fut52"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1wuvm"]
+size = Vector2(32, 32)
+
+[node name="Area2D" type="Area2D"]
+collision_mask = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_fut52")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_1wuvm")
