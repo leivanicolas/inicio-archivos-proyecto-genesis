@@ -1,4 +1,4 @@
-[gd_scene load_steps=61 format=3 uid="uid://dvkpxd32xkfo8"]
+[gd_scene load_steps=59 format=3 uid="uid://dvkpxd32xkfo8"]
 
 [ext_resource type="Texture2D" uid="uid://bajjsvj187tcq" path="res://texturas/rat and bat spritesheet calciumtrice.png" id="1_i0t1s"]
 [ext_resource type="Script" path="res://scripts/Raton2.cs" id="1_ppopg"]
@@ -445,21 +445,15 @@ _data = {
 }
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jumbg"]
-radius = 2.0
-height = 8.0
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_1xm0u"]
-size = Vector2(2, 7)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_bh28s"]
-size = Vector2(2, 7)
+radius = 3.0
+height = 12.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8bp21"]
-size = Vector2(8, 3)
+size = Vector2(10, 2)
 
 [node name="Node2D" type="CharacterBody2D"]
 collision_layer = 4
-collision_mask = 2
+collision_mask = 3
 script = ExtResource("1_ppopg")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -482,18 +476,11 @@ rotation = -1.5708
 shape = SubResource("CapsuleShape2D_jumbg")
 
 [node name="Area2D" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-6, 12)
-shape = SubResource("RectangleShape2D_1xm0u")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(6, 12)
-shape = SubResource("RectangleShape2D_bh28s")
+collision_layer = 4
+collision_mask = 2
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(0, 8.5)
+position = Vector2(0, 9)
 shape = SubResource("RectangleShape2D_8bp21")
 
-[connection signal="area_entered" from="Area2D" to="." method="OnArea2dAreaEntered"]
-[connection signal="body_entered" from="Area2D" to="." method="OnArea2dBodyEntered"]
+[connection signal="body_entered" from="Area2D" to="." method="OnBodyEntered"]
