@@ -92,4 +92,12 @@ public partial class Character2 : CharacterBody2D
 		}		
 		
 	}
+
+	private void OnBodyEntered(CharacterBody2D body)
+	{
+		if(body.IsInGroup("Enemies"))
+		{
+			GD.Print("Me toco un enemigo");
+		}
+	}
 }

@@ -3231,15 +3231,15 @@ texture = ExtResource("31_bjkww")
 
 [node name="Characters" type="Node2D" parent="."]
 
-[node name="murcielago" type="Node2D" parent="Characters"]
+[node name="murcielago" type="Node2D" parent="Characters" groups=["Enemies"]]
 position = Vector2(410.336, 170.573)
 
 [node name="CharacterBody2D" parent="Characters/murcielago" instance=ExtResource("23_qs6vd")]
 
-[node name="Node2D2" type="Node2D" parent="Characters"]
+[node name="raton" type="Node2D" parent="Characters" groups=["Enemies"]]
 position = Vector2(122, 192)
 
-[node name="Node2D" parent="Characters/Node2D2" instance=ExtResource("24_48lew")]
+[node name="Node2D" parent="Characters/raton" instance=ExtResource("24_48lew")]
 metadata/_edit_lock_ = true
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
