@@ -1,4 +1,4 @@
-[gd_scene load_steps=57 format=3 uid="uid://4kucf1ivws3g"]
+[gd_scene load_steps=54 format=3 uid="uid://4kucf1ivws3g"]
 
 [ext_resource type="Texture2D" uid="uid://bajjsvj187tcq" path="res://texturas/rat and bat spritesheet calciumtrice.png" id="1_c0qs8"]
 
@@ -377,92 +377,23 @@ animations = [{
 "texture": SubResource("AtlasTexture_myt7a")
 }],
 "loop": true,
-"name": &"jump",
+"name": &"walk",
 "speed": 9.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_sopes"]
 
-[sub_resource type="Animation" id="Animation_3rqh7"]
-length = 8.0
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 2, 4, 6, 8),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 0,
-"values": [Vector2(0, -12), Vector2(-24, -12), Vector2(0, -12), Vector2(26, -12), Vector2(0, -12)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:scale")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 2, 6, 8),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 1,
-"values": [Vector2(1, 1), Vector2(-1, 1), Vector2(1, 1), Vector2(1, 1)]
-}
-
-[sub_resource type="Animation" id="Animation_ptsw5"]
-resource_name = "caminar"
-length = 8.0
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 2, 4, 6, 8),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 0,
-"values": [Vector2(0, -12), Vector2(-28, -12), Vector2(0, -12), Vector2(30, -12), Vector2(0, -12)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:scale")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 2, 6, 8),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 1,
-"values": [Vector2(1, 1), Vector2(-1, 1), Vector2(1, 1), Vector2(1, 1)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_op6yd"]
-_data = {
-"RESET": SubResource("Animation_3rqh7"),
-"caminar": SubResource("Animation_ptsw5")
-}
-
 [node name="CharacterBody2D" type="CharacterBody2D"]
-position = Vector2(0, -12)
+position = Vector2(1, -12)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, 12)
 sprite_frames = SubResource("SpriteFrames_selau")
-animation = &"jump"
-autoplay = "jump"
-frame_progress = 0.836977
+animation = &"idle"
+autoplay = "idle"
 offset = Vector2(0, -12)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 12)
 scale = Vector2(0.596017, 0.337513)
 shape = SubResource("CapsuleShape2D_sopes")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_op6yd")
-}

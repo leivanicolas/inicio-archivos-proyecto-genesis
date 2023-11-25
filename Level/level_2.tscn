@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://mgia4sd6t3xh"]
+[gd_scene load_steps=35 format=3 uid="uid://mgia4sd6t3xh"]
 
 [ext_resource type="Texture2D" uid="uid://c4fbc5k4frpan" path="res://texturas/pixel_ocean_and_sky_background/1.png" id="1_austn"]
 [ext_resource type="Texture2D" uid="uid://j8cyaucji8df" path="res://texturas/pixel_ocean_and_sky_background/2.png" id="2_o1aho"]
@@ -28,6 +28,7 @@
 [ext_resource type="AudioStream" uid="uid://cg07kh5gefaxo" path="res://sonidos/24.wav" id="25_46k5b"]
 [ext_resource type="Texture2D" uid="uid://38m5tlhrbje5" path="res://texturas/SNES - Super Mario World - Yoshis Island 1.png" id="25_e5jqm"]
 [ext_resource type="PackedScene" uid="uid://y5n3m1vyrjff" path="res://Personajes/boss/boss2.tscn" id="26_s76to"]
+[ext_resource type="PackedScene" uid="uid://b5lindu461rnu" path="res://Objects/obstaculos/Skewer_supermario.tscn" id="28_66mdw"]
 [ext_resource type="Texture2D" uid="uid://1leq82l0hbbt" path="res://texturas/industrial_zone_tileset/3 Objects/Fence3.png" id="29_rol5p"]
 [ext_resource type="Texture2D" uid="uid://833wvsmni3w2" path="res://texturas/industrial_zone_tileset/3 Objects/Fence2.png" id="30_rv7jt"]
 [ext_resource type="Texture2D" uid="uid://dtg63y6s1bkfk" path="res://texturas/industrial_zone_tileset/3 Objects/Fence1.png" id="31_bjkww"]
@@ -1344,15 +1345,15 @@ position = Vector2(1282, -215)
 texture = ExtResource("15_dm3uo")
 
 [node name="Barrel1" type="Sprite2D" parent="object"]
-position = Vector2(1465, -452)
+position = Vector2(1444, -452)
 texture = ExtResource("16_xndqq")
 
 [node name="Barrel2" type="Sprite2D" parent="object"]
-position = Vector2(1497, -452)
+position = Vector2(1614, -554)
 texture = ExtResource("17_3skyq")
 
 [node name="Barrel3" type="Sprite2D" parent="object"]
-position = Vector2(1530, -452)
+position = Vector2(1809, -450)
 texture = ExtResource("18_v76qr")
 
 [node name="fuego4" parent="object" instance=ExtResource("19_32ebi")]
@@ -2675,6 +2676,62 @@ z_index = 2
 position = Vector2(1548, -430)
 scale = Vector2(0.533969, 0.533969)
 
+[node name="Area2D474" parent="object/Node2D" instance=ExtResource("20_3ix58")]
+z_index = 2
+position = Vector2(1497, -447)
+scale = Vector2(0.533969, 0.533969)
+
+[node name="Area2D475" parent="object/Node2D" instance=ExtResource("20_3ix58")]
+light_mask = 3
+z_index = 2
+position = Vector2(1514, -447)
+scale = Vector2(0.533969, 0.533969)
+
+[node name="Area2D477" parent="object/Node2D" instance=ExtResource("20_3ix58")]
+light_mask = 3
+z_index = 2
+position = Vector2(1514, -464)
+scale = Vector2(0.533969, 0.533969)
+
+[node name="Area2D480" parent="object/Node2D" instance=ExtResource("20_3ix58")]
+z_index = 2
+position = Vector2(1531, -447)
+scale = Vector2(0.533969, 0.533969)
+
+[node name="Area2D481" parent="object/Node2D" instance=ExtResource("20_3ix58")]
+light_mask = 3
+z_index = 2
+position = Vector2(1548, -447)
+scale = Vector2(0.533969, 0.533969)
+
+[node name="Area2D482" parent="object/Node2D" instance=ExtResource("20_3ix58")]
+z_index = 2
+position = Vector2(1531, -464)
+scale = Vector2(0.533969, 0.533969)
+
+[node name="Area2D483" parent="object/Node2D" instance=ExtResource("20_3ix58")]
+light_mask = 3
+z_index = 2
+position = Vector2(1548, -464)
+scale = Vector2(0.533969, 0.533969)
+
+[node name="Area2D484" parent="object/Node2D" instance=ExtResource("20_3ix58")]
+z_index = 2
+position = Vector2(1531, -481)
+scale = Vector2(0.533969, 0.533969)
+
+[node name="Area2D485" parent="object/Node2D" instance=ExtResource("20_3ix58")]
+light_mask = 3
+z_index = 2
+position = Vector2(1548, -481)
+scale = Vector2(0.533969, 0.533969)
+
+[node name="Area2D486" parent="object/Node2D" instance=ExtResource("20_3ix58")]
+light_mask = 3
+z_index = 2
+position = Vector2(1548, -498)
+scale = Vector2(0.533969, 0.533969)
+
 [node name="Area2D228" parent="object/Node2D" instance=ExtResource("20_3ix58")]
 z_index = 2
 position = Vector2(1565, -379)
@@ -2774,9 +2831,75 @@ z_index = 2
 position = Vector2(1650, -379)
 scale = Vector2(0.533969, 0.533969)
 
+[node name="Area2D472" parent="object/Node2D" instance=ExtResource("20_3ix58")]
+light_mask = 3
+z_index = 2
+position = Vector2(1548, -362)
+scale = Vector2(0.533969, 0.533969)
+
+[node name="Area2D473" parent="object/Node2D" instance=ExtResource("20_3ix58")]
+light_mask = 3
+z_index = 2
+position = Vector2(1650, -362)
+scale = Vector2(0.533969, 0.533969)
+
 [node name="Area2D246" parent="object/Node2D" instance=ExtResource("20_3ix58")]
 z_index = 2
 position = Vector2(1633, -396)
+scale = Vector2(0.533969, 0.533969)
+
+[node name="Area2D462" parent="object/Node2D" instance=ExtResource("20_3ix58")]
+z_index = 2
+position = Vector2(1565, -345)
+scale = Vector2(0.533969, 0.533969)
+
+[node name="Area2D463" parent="object/Node2D" instance=ExtResource("20_3ix58")]
+light_mask = 3
+z_index = 2
+position = Vector2(1582, -345)
+scale = Vector2(0.533969, 0.533969)
+
+[node name="Area2D464" parent="object/Node2D" instance=ExtResource("20_3ix58")]
+z_index = 2
+position = Vector2(1565, -362)
+scale = Vector2(0.533969, 0.533969)
+
+[node name="Area2D465" parent="object/Node2D" instance=ExtResource("20_3ix58")]
+light_mask = 3
+z_index = 2
+position = Vector2(1582, -362)
+scale = Vector2(0.533969, 0.533969)
+
+[node name="Area2D466" parent="object/Node2D" instance=ExtResource("20_3ix58")]
+z_index = 2
+position = Vector2(1599, -345)
+scale = Vector2(0.533969, 0.533969)
+
+[node name="Area2D467" parent="object/Node2D" instance=ExtResource("20_3ix58")]
+light_mask = 3
+z_index = 2
+position = Vector2(1616, -345)
+scale = Vector2(0.533969, 0.533969)
+
+[node name="Area2D468" parent="object/Node2D" instance=ExtResource("20_3ix58")]
+z_index = 2
+position = Vector2(1599, -362)
+scale = Vector2(0.533969, 0.533969)
+
+[node name="Area2D469" parent="object/Node2D" instance=ExtResource("20_3ix58")]
+light_mask = 3
+z_index = 2
+position = Vector2(1616, -362)
+scale = Vector2(0.533969, 0.533969)
+
+[node name="Area2D470" parent="object/Node2D" instance=ExtResource("20_3ix58")]
+z_index = 2
+position = Vector2(1633, -345)
+scale = Vector2(0.533969, 0.533969)
+
+[node name="Area2D471" parent="object/Node2D" instance=ExtResource("20_3ix58")]
+z_index = 2
+position = Vector2(1633, -362)
 scale = Vector2(0.533969, 0.533969)
 
 [node name="Area2D247" parent="object/Node2D" instance=ExtResource("20_3ix58")]
@@ -2799,6 +2922,163 @@ scale = Vector2(0.533969, 0.533969)
 [node name="Area2D250" parent="object/Node2D" instance=ExtResource("20_3ix58")]
 z_index = 2
 position = Vector2(1633, -430)
+scale = Vector2(0.533969, 0.533969)
+
+[node name="Area2D432" parent="object/Node2D" instance=ExtResource("20_3ix58")]
+z_index = 2
+position = Vector2(1565, -447)
+scale = Vector2(0.533969, 0.533969)
+
+[node name="Area2D433" parent="object/Node2D" instance=ExtResource("20_3ix58")]
+light_mask = 3
+z_index = 2
+position = Vector2(1582, -447)
+scale = Vector2(0.533969, 0.533969)
+
+[node name="Area2D434" parent="object/Node2D" instance=ExtResource("20_3ix58")]
+z_index = 2
+position = Vector2(1565, -464)
+scale = Vector2(0.533969, 0.533969)
+
+[node name="Area2D435" parent="object/Node2D" instance=ExtResource("20_3ix58")]
+light_mask = 3
+z_index = 2
+position = Vector2(1582, -464)
+scale = Vector2(0.533969, 0.533969)
+
+[node name="Area2D436" parent="object/Node2D" instance=ExtResource("20_3ix58")]
+z_index = 2
+position = Vector2(1565, -481)
+scale = Vector2(0.533969, 0.533969)
+
+[node name="Area2D437" parent="object/Node2D" instance=ExtResource("20_3ix58")]
+light_mask = 3
+z_index = 2
+position = Vector2(1582, -481)
+scale = Vector2(0.533969, 0.533969)
+
+[node name="Area2D438" parent="object/Node2D" instance=ExtResource("20_3ix58")]
+z_index = 2
+position = Vector2(1565, -498)
+scale = Vector2(0.533969, 0.533969)
+
+[node name="Area2D452" parent="object/Node2D" instance=ExtResource("20_3ix58")]
+z_index = 2
+position = Vector2(1565, -515)
+scale = Vector2(0.533969, 0.533969)
+
+[node name="Area2D439" parent="object/Node2D" instance=ExtResource("20_3ix58")]
+light_mask = 3
+z_index = 2
+position = Vector2(1582, -498)
+scale = Vector2(0.533969, 0.533969)
+
+[node name="Area2D440" parent="object/Node2D" instance=ExtResource("20_3ix58")]
+z_index = 2
+position = Vector2(1599, -447)
+scale = Vector2(0.533969, 0.533969)
+
+[node name="Area2D441" parent="object/Node2D" instance=ExtResource("20_3ix58")]
+light_mask = 3
+z_index = 2
+position = Vector2(1616, -447)
+scale = Vector2(0.533969, 0.533969)
+
+[node name="Area2D442" parent="object/Node2D" instance=ExtResource("20_3ix58")]
+z_index = 2
+position = Vector2(1599, -464)
+scale = Vector2(0.533969, 0.533969)
+
+[node name="Area2D443" parent="object/Node2D" instance=ExtResource("20_3ix58")]
+light_mask = 3
+z_index = 2
+position = Vector2(1616, -464)
+scale = Vector2(0.533969, 0.533969)
+
+[node name="Area2D444" parent="object/Node2D" instance=ExtResource("20_3ix58")]
+z_index = 2
+position = Vector2(1599, -481)
+scale = Vector2(0.533969, 0.533969)
+
+[node name="Area2D445" parent="object/Node2D" instance=ExtResource("20_3ix58")]
+light_mask = 3
+z_index = 2
+position = Vector2(1616, -481)
+scale = Vector2(0.533969, 0.533969)
+
+[node name="Area2D446" parent="object/Node2D" instance=ExtResource("20_3ix58")]
+z_index = 2
+position = Vector2(1599, -498)
+scale = Vector2(0.533969, 0.533969)
+
+[node name="Area2D447" parent="object/Node2D" instance=ExtResource("20_3ix58")]
+light_mask = 3
+z_index = 2
+position = Vector2(1616, -498)
+scale = Vector2(0.533969, 0.533969)
+
+[node name="Area2D448" parent="object/Node2D" instance=ExtResource("20_3ix58")]
+z_index = 2
+position = Vector2(1633, -447)
+scale = Vector2(0.533969, 0.533969)
+
+[node name="Area2D449" parent="object/Node2D" instance=ExtResource("20_3ix58")]
+z_index = 2
+position = Vector2(1633, -464)
+scale = Vector2(0.533969, 0.533969)
+
+[node name="Area2D450" parent="object/Node2D" instance=ExtResource("20_3ix58")]
+z_index = 2
+position = Vector2(1633, -481)
+scale = Vector2(0.533969, 0.533969)
+
+[node name="Area2D451" parent="object/Node2D" instance=ExtResource("20_3ix58")]
+z_index = 2
+position = Vector2(1633, -498)
+scale = Vector2(0.533969, 0.533969)
+
+[node name="Area2D453" parent="object/Node2D" instance=ExtResource("20_3ix58")]
+light_mask = 3
+z_index = 2
+position = Vector2(1582, -515)
+scale = Vector2(0.533969, 0.533969)
+
+[node name="Area2D455" parent="object/Node2D" instance=ExtResource("20_3ix58")]
+light_mask = 3
+z_index = 2
+position = Vector2(1582, -532)
+scale = Vector2(0.533969, 0.533969)
+
+[node name="Area2D456" parent="object/Node2D" instance=ExtResource("20_3ix58")]
+z_index = 2
+position = Vector2(1599, -515)
+scale = Vector2(0.533969, 0.533969)
+
+[node name="Area2D457" parent="object/Node2D" instance=ExtResource("20_3ix58")]
+light_mask = 3
+z_index = 2
+position = Vector2(1616, -515)
+scale = Vector2(0.533969, 0.533969)
+
+[node name="Area2D458" parent="object/Node2D" instance=ExtResource("20_3ix58")]
+z_index = 2
+position = Vector2(1599, -532)
+scale = Vector2(0.533969, 0.533969)
+
+[node name="Area2D459" parent="object/Node2D" instance=ExtResource("20_3ix58")]
+light_mask = 3
+z_index = 2
+position = Vector2(1616, -532)
+scale = Vector2(0.533969, 0.533969)
+
+[node name="Area2D460" parent="object/Node2D" instance=ExtResource("20_3ix58")]
+z_index = 2
+position = Vector2(1633, -515)
+scale = Vector2(0.533969, 0.533969)
+
+[node name="Area2D461" parent="object/Node2D" instance=ExtResource("20_3ix58")]
+z_index = 2
+position = Vector2(1633, -532)
 scale = Vector2(0.533969, 0.533969)
 
 [node name="Area2D251" parent="object/Node2D" instance=ExtResource("20_3ix58")]
@@ -3832,6 +4112,27 @@ position = Vector2(122, 192)
 
 [node name="Node2D" parent="Characters/raton" instance=ExtResource("24_48lew")]
 metadata/_edit_lock_ = true
+
+[node name="Area2D" parent="." instance=ExtResource("28_66mdw")]
+z_index = 2
+position = Vector2(1670, 238)
+
+[node name="Area2D2" parent="." instance=ExtResource("28_66mdw")]
+z_index = 2
+position = Vector2(2995, 241)
+
+[node name="Area2D3" parent="." instance=ExtResource("28_66mdw")]
+z_index = 1
+position = Vector2(3232, 155)
+
+[node name="Area2D5" parent="." instance=ExtResource("28_66mdw")]
+z_index = 1
+position = Vector2(2251, -105)
+scale = Vector2(1, 1)
+
+[node name="Area2D4" parent="." instance=ExtResource("28_66mdw")]
+z_index = 1
+position = Vector2(3366, 155)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("25_46k5b")
