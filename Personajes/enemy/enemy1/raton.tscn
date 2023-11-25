@@ -1,6 +1,11 @@
+<<<<<<< HEAD
 [gd_scene load_steps=54 format=3 uid="uid://4kucf1ivws3g"]
+=======
+[gd_scene load_steps=56 format=3 uid="uid://4kucf1ivws3g"]
+>>>>>>> d767563efcfd2cf2276b52eba2953eeb62138806
 
 [ext_resource type="Texture2D" uid="uid://bajjsvj187tcq" path="res://texturas/rat and bat spritesheet calciumtrice.png" id="1_c0qs8"]
+[ext_resource type="Script" path="res://scripts/EnemyController.cs" id="1_taxdv"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ri7si"]
 atlas = ExtResource("1_c0qs8")
@@ -383,17 +388,45 @@ animations = [{
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_sopes"]
 
+<<<<<<< HEAD
 [node name="CharacterBody2D" type="CharacterBody2D"]
 position = Vector2(1, -12)
+=======
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kgvgq"]
+size = Vector2(10.75, 2)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+position = Vector2(0, -12)
+collision_layer = 4
+script = ExtResource("1_taxdv")
+>>>>>>> d767563efcfd2cf2276b52eba2953eeb62138806
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, 12)
 sprite_frames = SubResource("SpriteFrames_selau")
 animation = &"idle"
 autoplay = "idle"
+<<<<<<< HEAD
+=======
+frame = 4
+frame_progress = 0.555914
+>>>>>>> d767563efcfd2cf2276b52eba2953eeb62138806
 offset = Vector2(0, -12)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 12)
 scale = Vector2(0.596017, 0.337513)
 shape = SubResource("CapsuleShape2D_sopes")
+<<<<<<< HEAD
+=======
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 8)
+shape = SubResource("RectangleShape2D_kgvgq")
+
+[connection signal="body_entered" from="Area2D" to="." method="OnBodyEntered"]
+>>>>>>> d767563efcfd2cf2276b52eba2953eeb62138806

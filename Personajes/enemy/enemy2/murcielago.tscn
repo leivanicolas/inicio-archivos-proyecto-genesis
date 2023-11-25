@@ -1,4 +1,4 @@
-[gd_scene load_steps=60 format=3 uid="uid://ba5pbjxcur8we"]
+[gd_scene load_steps=57 format=3 uid="uid://ba5pbjxcur8we"]
 
 [ext_resource type="Script" path="res://scripts/EnemyController.cs" id="1_nyarm"]
 [ext_resource type="Texture2D" uid="uid://bajjsvj187tcq" path="res://texturas/rat and bat spritesheet calciumtrice.png" id="1_tjj88"]
@@ -378,75 +378,13 @@ animations = [{
 "texture": SubResource("AtlasTexture_ivtew")
 }],
 "loop": true,
-"name": &"idle2",
+"name": &"walk",
 "speed": 9.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1ekgw"]
 radius = 3.38729
 height = 18.1838
-
-[sub_resource type="Animation" id="Animation_7hflt"]
-length = 8.0
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 2, 4, 6, 8),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 0,
-"values": [Vector2(0, 0), Vector2(-44, 0), Vector2(0, 0), Vector2(44, 0), Vector2(0, 0)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:scale")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 2, 6),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [Vector2(1, 1), Vector2(-1, 1), Vector2(1, 1)]
-}
-
-[sub_resource type="Animation" id="Animation_f5aau"]
-resource_name = "movimiento"
-length = 8.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 2, 4, 6, 8),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 0,
-"values": [Vector2(0, 0), Vector2(-43, 0), Vector2(0, 0), Vector2(40, 0), Vector2(0, 0)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:scale")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 1.9, 2, 5.9, 6, 8),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
-"update": 0,
-"values": [Vector2(1, 1), Vector2(1, 1), Vector2(-1, 1), Vector2(-1, 1), Vector2(1, 1), Vector2(1, 1)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_34ea5"]
-_data = {
-"RESET": SubResource("Animation_7hflt"),
-"movimiento": SubResource("Animation_f5aau")
-}
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_82odc"]
 size = Vector2(14, 2)
@@ -458,20 +396,13 @@ script = ExtResource("1_nyarm")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_ljqpp")
-animation = &"idle"
+animation = &"walk"
 autoplay = "idle"
-frame_progress = 0.674356
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 rotation = 1.5708
 scale = Vector2(0.885665, 0.879904)
 shape = SubResource("CapsuleShape2D_1ekgw")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-autoplay = "RESET"
-libraries = {
-"": SubResource("AnimationLibrary_34ea5")
-}
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("2_j02t2")
