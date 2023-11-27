@@ -1,0 +1,149 @@
+[gd_scene load_steps=21 format=3 uid="uid://b3q7i4bh63xn0"]
+
+[ext_resource type="Texture2D" uid="uid://cjds17sbcyve7" path="res://texturas/PC Computer - Blasphemous - Arcade Machine.png" id="1_rbjk8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1uvgg"]
+atlas = ExtResource("1_rbjk8")
+region = Rect2(0, 0, 94, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vwc4k"]
+atlas = ExtResource("1_rbjk8")
+region = Rect2(94, 0, 94, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0xvbo"]
+atlas = ExtResource("1_rbjk8")
+region = Rect2(188, 0, 94, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i3k5v"]
+atlas = ExtResource("1_rbjk8")
+region = Rect2(282, 0, 94, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_px34k"]
+atlas = ExtResource("1_rbjk8")
+region = Rect2(376, 0, 94, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rrc7t"]
+atlas = ExtResource("1_rbjk8")
+region = Rect2(0, 90, 94, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s3k1s"]
+atlas = ExtResource("1_rbjk8")
+region = Rect2(94, 90, 94, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2u751"]
+atlas = ExtResource("1_rbjk8")
+region = Rect2(188, 90, 94, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ommpy"]
+atlas = ExtResource("1_rbjk8")
+region = Rect2(282, 90, 94, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nsfiu"]
+atlas = ExtResource("1_rbjk8")
+region = Rect2(376, 90, 94, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w6awn"]
+atlas = ExtResource("1_rbjk8")
+region = Rect2(0, 180, 94, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kwvqb"]
+atlas = ExtResource("1_rbjk8")
+region = Rect2(94, 180, 94, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bvf8f"]
+atlas = ExtResource("1_rbjk8")
+region = Rect2(188, 180, 94, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_almtl"]
+atlas = ExtResource("1_rbjk8")
+region = Rect2(282, 180, 94, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dyk6r"]
+atlas = ExtResource("1_rbjk8")
+region = Rect2(376, 180, 94, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rncvm"]
+atlas = ExtResource("1_rbjk8")
+region = Rect2(0, 270, 94, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v04ab"]
+atlas = ExtResource("1_rbjk8")
+region = Rect2(94, 270, 94, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cfsci"]
+atlas = ExtResource("1_rbjk8")
+region = Rect2(188, 270, 94, 90)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ivi8e"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1uvgg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vwc4k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0xvbo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i3k5v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_px34k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rrc7t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s3k1s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2u751")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ommpy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nsfiu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w6awn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kwvqb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bvf8f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_almtl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dyk6r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rncvm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v04ab")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cfsci")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[node name="Consola" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+hframes = 5
+vframes = 4
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Sprite2D"]
+sprite_frames = SubResource("SpriteFrames_ivi8e")
+animation = &"Idle"
+autoplay = "Idle"
+frame_progress = 0.374391
