@@ -1560,7 +1560,7 @@ position = Vector2(2547, 43)
 texture = ExtResource("25_e5jqm")
 
 [node name="Player" parent="." instance=ExtResource("22_x70xf")]
-position = Vector2(207, 159)
+position = Vector2(4273, -277)
 speed = 200.0
 
 [node name="TileMap2" parent="." instance=ExtResource("32_np7gq")]
