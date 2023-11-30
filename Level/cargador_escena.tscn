@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://63ix21nwxxtc"]
+
+[ext_resource type="Script" path="res://scripts/CargadorEscena.cs" id="1_fljmq"]
+
+[node name="CargadorEscena" type="Node"]
+script = ExtResource("1_fljmq")
