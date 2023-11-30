@@ -97,7 +97,15 @@ public partial class Character2 : CharacterBody2D
 	{
 		if(body.IsInGroup("Enemies"))
 		{
-			GD.Print("Me toco un enemigo");
+			GD.Print("Me mato el enemigo");
+		}
+
+	}
+	private void OnArea2DEntered(Area2D body)
+	{
+		if(body.IsInGroup("Mazos"))
+		{
+			GD.Print("Me mato el mazo");
 		}
 	}
 }
