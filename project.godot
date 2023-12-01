@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="Inicio-archivos-proyecto-genesis"
-run/main_scene="res://Level/level_2.tscn"
+run/main_scene="res://Level/pantalla_bienvenida.tscn"
 config/features=PackedStringArray("4.1", "C#", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[autoload]
+
+CargadorEscena="*res://Level/cargador_escena.tscn"
 
 [dotnet]
 
